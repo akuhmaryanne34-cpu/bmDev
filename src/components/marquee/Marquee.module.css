@@ -46,9 +46,9 @@
 .content {
   display: flex;
   align-items: center;
-  gap: 60px;
+  gap: 100px;
 
-  padding-right: 60px;
+  padding-right: 100px;
 }
 
 /* TEXT */
