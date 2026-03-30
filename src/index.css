@@ -1,0 +1,41 @@
+/* RESET EVERYTHING */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* PREVENT OVERFLOW ISSUES */
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* BODY */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  background: linear-gradient(135deg, #090d06, #132016);
+  min-height: 100vh;
+  color: white;
+}
+
+/* REMOVE DEFAULT LINK STYLES */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* BUTTON RESET */
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* IMAGES */
+img {
+  max-width: 100%;
+  display: block;
+}

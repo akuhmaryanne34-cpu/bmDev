@@ -1,0 +1,156 @@
+/* WRAPPER */
+.navWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  position: absolute;
+  top: 20px; /* 🔥 more breathing space */
+  left: 0;
+  z-index: 100;
+}
+
+/* NAVBAR CARD */
+.navbar {
+  width: 85%;
+  max-width: 1100px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 14px 30px;
+
+  /* 🔥 STRONGER GLASS EFFECT */
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(15px);
+
+  border-radius: 14px;
+
+  /* subtle border */
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  /* 🔥 shadow = floating feel */
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* LOGO */
+.logo a {
+  color: white;
+  font-weight: 600;
+  font-size: 1.2rem;
+  text-decoration: none;
+  font-family: "Orbitron",sans-serif;
+}
+
+/* NAV LINKS */
+.navLinks {
+  display: flex;
+  gap: 30px;
+}
+
+.navLinks a {
+  color: #bfc5c2;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-family: "ManRope",sans-serif;
+  transition: 0.3s ease;
+}
+.navLinks a {
+  position: relative;
+  color: #bfc5c2;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+/* HOVER COLOR */
+.navLinks a:hover {
+  color: white;
+}
+
+/* 🔥 UNDERLINE EFFECT */
+.navLinks a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+
+  width: 0%;
+  height: 2px;
+
+  background: #9FE870;
+  transition: width 0.3s ease;
+}
+
+/* ON HOVER → EXPAND LINE */
+.navLinks a:hover::after {
+  width: 100%;
+}
+
+.navLinks a:hover {
+  color: white;
+}
+
+/* CTA BUTTON */
+.cta button {
+  background: #9FE870;
+  color: #090D06;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+    font-family: "ManRope",sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.cta button:hover {
+  transform: translateY(-2px);
+}
+
+/* HAMBURGER ICON */
+.menuIcon {
+  display: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: white;
+}
+
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+
+  .menuIcon {
+    display: block;
+  }
+
+  .navLinks {
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 90%;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+
+    border-radius: 10px;
+    padding: 20px;
+
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    display: none;
+  }
+
+  .navLinks.active {
+    display: flex;
+  }
+
+  .cta {
+    display: none; /* cleaner mobile */
+  }
+}
+
